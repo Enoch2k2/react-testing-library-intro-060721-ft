@@ -26,11 +26,11 @@ test('has a counter that can increment', () => {
   const count = screen.getByText('0');
 
   // click the button
-  fireEvent(button, 'click')
+  fireEvent.click(button);
   // expect the count to be 1
-  expect(count).toBe('1');
+  expect(count.textContent).toBe('1');
   // click the button again
-  fireEvent(button, 'click');
+  fireEvent.click(button);
   // expect the count to be 2
-  expect(count).toBe('2');
+  expect(count.textContent).toBe('2');
 })
